@@ -55,6 +55,13 @@ TplRwtmplHelper::setMetadata();
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
+                    <?php if ($this->countModules('footer')) : ?>
+                        <jdoc:include type="modules" name="footer" style="xhtml" />
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <jdoc:include type="modules" name="debug" style="block" />
                 </div>
             </div>
