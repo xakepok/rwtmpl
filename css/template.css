@@ -1,3 +1,18 @@
+@font-face {
+    font-family: '8143';
+    src: url('fonts/8143.eot');
+    src: url('fonts/8143.eot') format('embedded-opentype'),
+    url('fonts/8143.woff2') format('woff2'),
+    url('fonts/8143.woff') format('woff'),
+    url('fonts/8143.ttf') format('truetype'),
+    url('fonts/8143.svg#8143') format('svg');
+}
+body,a {
+    font-family: '8143';
+}
+a {
+    color: #128f44;
+}
 .sr-only {
     position: absolute;
     width: 1px;
@@ -16,4 +31,8 @@
     margin: 0;
     overflow: visible;
     clip: auto;
+}
+
+.page-header {
+    color: #0b2e13;
 }

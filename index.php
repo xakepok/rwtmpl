@@ -3,9 +3,9 @@ defined('_JEXEC') or die;
 
 require_once JPATH_THEMES . '/' . $this->template . '/helper.php';
 
-tplRwtmplHelper::loadCss();
-tplRwtmplHelper::loadJs();
-tplRwtmplHelper::setMetadata();
+TplRwtmplHelper::loadCss();
+TplRwtmplHelper::loadJs();
+TplRwtmplHelper::setMetadata();
 
 ?>
 <!DOCTYPE html>
@@ -13,52 +13,53 @@ tplRwtmplHelper::setMetadata();
 <head>
 	<jdoc:include type="head" />
 </head>
-<body class="<?php echo tplRwtmplHelper::setBodySuffix(); ?>">
+<body class="<?php echo TplRwtmplHelper::setBodySuffix(); ?>">
 <?php //echo tplRwtmplHelper::setAnalytics(0, 'your-analytics-id'); ?>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col text-center">
-            <img src="/images/logo_site.png" alt="Logo" />
+    <header>
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid" src="/images/logo_site.png" alt="Logo" />
+                </div>
+            </div>
+            <div class="row">
+                <div id="nav" class="col">
+                    <jdoc:include type="modules" name="menu" style="none" />
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <jdoc:include type="modules" name="menu" />
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <?php if ($this->countModules('left')) : ?>
+                        <jdoc:include type="modules" name="left" style="xhtml" />
+                    <?php endif; ?>
+                </div>
+                <div class="col-lg-8">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+                </div>
+                <div class="col-lg-2">
+                    <?php if ($this->countModules('right')) : ?>
+                        <jdoc:include type="modules" name="right" style="xhtml" />
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3">
-            <?php if ($this->countModules('left')) : ?>
-                <jdoc:include type="modules" name="left" />
-            <?php endif; ?>
+    </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <jdoc:include type="modules" name="debug" style="block" />
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6">
-            <jdoc:include type="message" />
-            <jdoc:include type="component" />
-        </div>
-        <div class="col-lg-3">
-            <?php if ($this->countModules('right')) : ?>
-                <jdoc:include type="modules" name="right" />
-            <?php endif; ?>
-        </div>
-    </div>
+    </footer>
 </div>
-
-<a href="#main" class="sr-only sr-only-focusable"><?php echo JText::_('TPL_RWTMPL_SKIP_LINK_LABEL'); ?></a>
-
-<a href="<?php echo $this->baseurl; ?>/">
-    <?php if ($this->params->get('sitedescription')) : ?>
-        <?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
-    <?php endif; ?>
-</a>
-
-<rwtmplter>
-	<jdoc:include type="modules" name="rwtmplter" style="none" />
-	<p>
-		&copy; <?php echo date('Y'); ?> <?php echo tplRwtmplHelper::getSitename(); ?>
-	</p>
-</rwtmplter>
-<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
