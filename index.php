@@ -12,6 +12,7 @@ TplRwtmplHelper::setMetadata();
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
+    <link rel="icon" href="/templates/<?php echo $this->template;?>/images/ico_64.png" type="image/png">
 </head>
 <body class="<?php echo TplRwtmplHelper::setBodySuffix(); ?>">
 <?php //echo tplRwtmplHelper::setAnalytics(0, 'your-analytics-id'); ?>
