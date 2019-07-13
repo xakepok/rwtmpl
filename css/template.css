@@ -7,11 +7,20 @@
     url('fonts/8143.ttf') format('truetype'),
     url('fonts/8143.svg#8143') format('svg');
 }
+@media (max-width: 576px) {
+    #component {
+        font-size: 3.3vw;
+    }
+}
 body,a {
     font-family: '8143';
 }
 a {
     color: #128f44;
+}
+
+.spacer {
+    margin: 5px auto;
 }
 .sr-only {
     position: absolute;
