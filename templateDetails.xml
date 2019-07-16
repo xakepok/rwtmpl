@@ -32,6 +32,8 @@
         <position>right</position>
         <position>footer</position>
         <position>rwtmplter</position>
+        <position>adv_mobile</position>
+        <position>adv_desktop</position>
     </positions>
 
     <config>
@@ -43,6 +45,20 @@
                        label="JGLOBAL_DESCRIPTION"
                        description="JGLOBAL_SUBHEADING_DESC"
                        filter="string"/>
+            </fieldset>
+            <fieldset name="metrika" label="COM_RWTMPL_CONFIG_YAMETRIKA" description="COM_RWTMPL_CONFIG_YAMETRIKA_DESC">
+                <field name="yametrika_id"
+                       type="text"
+                       filter="int"
+                       label="COM_RWTMPL_CONFIG_YAMETRIKA_ID"
+                       description="COM_RWTMPL_CONFIG_YAMETRIKA_ID_DESC"
+                       />
+                <field name="webmaster_code"
+                       type="text"
+                       filter="string"
+                       label="COM_RWTMPL_CONFIG_WEBMASTER_CODE"
+                       description="COM_RWTMPL_CONFIG_WEBMASTER_CODE_DESC"
+                       />
             </fieldset>
         </fields>
     </config>
