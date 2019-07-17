@@ -25,6 +25,7 @@
     </files>
 
     <positions>
+        <position>breadcrumbs</position>
         <position>debug</position>
         <position>menu</position>
         <position>left</position>

@@ -63,6 +63,15 @@ TplRwtmplHelper::setMetadata();
                 </div>
             </div>
         </div>
+        <div class="row" id="breads">
+            <div class="col">
+                <div class="container-fluid">
+                    <?php if ($this->countModules('breadcrumbs')) : ?>
+                        <jdoc:include type="modules" name="breadcrumbs" style="xhtml"/>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="container-fluid">
