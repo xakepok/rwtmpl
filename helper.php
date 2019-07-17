@@ -262,7 +262,6 @@ class TplRwtmplHelper
 	 */
 	static public function loadJs()
 	{
-		HTMLHelper::_('script', 'jquery-3.4.1.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'popper.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'bootstrap.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'template.js', ['version' => 'auto', 'relative' => true]);
