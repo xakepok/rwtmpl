@@ -241,6 +241,7 @@ class TplRwtmplHelper
 	static public function loadCss()
 	{
 		HTMLHelper::_('stylesheet', 'bootstrap.min.css', ['version' => 'auto', 'relative' => true]);
+		HTMLHelper::_('stylesheet', 'bootstrap-select.min.css', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('stylesheet', 'template.css', ['version' => 'auto', 'relative' => true]);
 
 		// Check for a custom CSS file
@@ -264,6 +265,8 @@ class TplRwtmplHelper
 	{
 		HTMLHelper::_('script', 'popper.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'bootstrap.min.js', ['version' => 'auto', 'relative' => true]);
+		HTMLHelper::_('script', 'bootstrap-select.min.js', ['version' => 'auto', 'relative' => true]);
+		HTMLHelper::_('script', 'i18n/defaults-ru_RU.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'template.js', ['version' => 'auto', 'relative' => true]);
 	}
 
