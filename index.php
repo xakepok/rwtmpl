@@ -2,6 +2,7 @@
 defined('_JEXEC') or die;
 
 require_once JPATH_THEMES . '/' . $this->template . '/helper.php';
+require_once JPATH_ADMINISTRATOR . '/components/com_rw/helpers/rw.php';
 $webmaster = $this->params->get('webmaster_code', null);
 $metrika = $this->params->get('yametrika_id', null);
 
@@ -81,12 +82,14 @@ TplRwtmplHelper::setMetadata();
                         <?php if ($this->countModules('footer')) : ?>
                             <jdoc:include type="modules" name="footer" style="xhtml"/>
                         <?php endif; ?>
-                        <?php if ($this->countModules('adv_desktop') && !JFactory::getApplication()->client->mobile) : ?>
-                            <jdoc:include type="modules" name="adv_desktop" style="xhtml"/>
-                        <?php endif; ?>
-                        <?php if ($this->countModules('adv_mobile') && JFactory::getApplication()->client->mobile) : ?>
-                            <jdoc:include type="modules" name="adv_mobile" style="xhtml"/>
-                        <?php endif; ?>
+                        <?php if (!RwHelper::isClub()): ?>
+                            <?php if ($this->countModules('adv_desktop') && !JFactory::getApplication()->client->mobile) : ?>
+                                <jdoc:include type="modules" name="adv_desktop" style="xhtml"/>
+                            <?php endif; ?>
+                            <?php if ($this->countModules('adv_mobile') && JFactory::getApplication()->client->mobile) : ?>
+                                <jdoc:include type="modules" name="adv_mobile" style="xhtml"/>
+                            <?php endif; ?>
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
