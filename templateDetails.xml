@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
     <name>rwtmpl</name>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <creationDate>09.07.2019</creationDate>
     <author>xakepok@xakepok.com</author>
     <authorEmail>your@email.com</authorEmail>
@@ -25,6 +25,7 @@
     </files>
 
     <positions>
+        <position>raspsearch</position>
         <position>breadcrumbs</position>
         <position>debug</position>
         <position>menu</position>
