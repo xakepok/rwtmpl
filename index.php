@@ -90,10 +90,6 @@ TplRwtmplHelper::setMetadata();
                                 <jdoc:include type="modules" name="adv_mobile" style="xhtml"/>
                             <?php endif; ?>
                         <?php endif;?>
-                        <select name="ts" id="">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
                     </div>
                 </div>
             </div>
