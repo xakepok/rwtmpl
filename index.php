@@ -50,7 +50,7 @@ TplRwtmplHelper::setMetadata();
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div>
+                    <div class="m-2">
                         <jdoc:include type="modules" name="raspsearch" style="xhtml"/>
                     </div>
                     <div class="container-fluid" id="component">
