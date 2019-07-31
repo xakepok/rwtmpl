@@ -242,6 +242,7 @@ class TplRwtmplHelper
 	{
 		HTMLHelper::_('stylesheet', 'bootstrap.min.css', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('stylesheet', 'bootstrap-select.min.css', ['version' => 'auto', 'relative' => true]);
+		HTMLHelper::_('stylesheet', 'bootstrap-datepicker3.css', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('stylesheet', 'template.css', ['version' => 'auto', 'relative' => true]);
 
 		// Check for a custom CSS file
@@ -267,7 +268,9 @@ class TplRwtmplHelper
 		HTMLHelper::_('script', 'bootstrap.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'bootstrap-select.min.js', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('script', 'i18n/defaults-ru_RU.js', ['version' => 'auto', 'relative' => true]);
-		HTMLHelper::_('script', 'template.js', ['version' => 'auto', 'relative' => true]);
+        HTMLHelper::_('script', 'bootstrap-datepicker.min.js', ['version' => 'auto', 'relative' => true]);
+        HTMLHelper::_('script', 'bootstrap-datepicker.ru.min.js', ['version' => 'auto', 'relative' => true]);
+        HTMLHelper::_('script', 'template.js', ['version' => 'auto', 'relative' => true]);
 	}
 
 	/**
